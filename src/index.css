@@ -144,9 +144,9 @@ body{
     color: var(--primary-color);
     font-size: 1.2rem;
     overflow-y: auto;
-    line-height: 1.5rem;
+    line-height: 1.6rem;
     word-wrap: break-word;
-    max-height: 120px;
+    max-height: 170px;
 }
 
 .note-item p::-webkit-scrollbar{
@@ -157,10 +157,11 @@ body{
     width: 4px;
 }
 
-.note-item p::-webkit-scrollbar-thumb{
+.note-item p:hover::-webkit-scrollbar-thumb{
     background: var(--accent2);
     border-radius: 10px;
 }
+
 
 @media(max-width: 760px){
 
