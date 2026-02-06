@@ -1,0 +1,208 @@
+:root{
+    --primary-color: #8A78B0;
+    --secondary-color: #8F84C1;
+    --accent1: #e6e1f3;
+    --accent2: #ACAED3;
+    --accent3: #e9e6fa;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.notes{
+    max-width: 700px;
+    /* border: 2px solid var(--accent2); */
+    padding: 1.8rem 0;
+    margin: 20px auto;
+    background-color: var(--accent1);
+    border-radius: 1rem;
+}
+
+.notes h1{
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    text-shadow: 0 0 5px var(--accent2);
+    text-align: center;
+    margin-bottom: 2.6rem;
+}
+
+.notes-input{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    align-items: center;
+}
+
+.notes-input input{
+    padding: .8rem .6rem;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    color: var(--primary-color);
+    border-radius: .4rem;
+}
+
+.notes-input input::placeholder{
+    color: var(--accent2);
+    font-style: italic;
+}
+
+.notes-input textarea::placeholder{
+    color: var(--accent2);
+    font-style: italic;
+}
+
+.notes-input textarea{
+    padding: .8rem .6rem;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    color: var(--primary-color);
+    border-radius: .4rem;
+    height: 100px;
+    resize: none;
+}
+
+.notes-input textarea::-webkit-scrollbar{
+    width: 4px;
+}
+
+.notes-input textarea::-webkit-scrollbar-thumb{
+    background-color: var(--accent2);
+    border-radius: 10px;
+}
+
+.add-note{
+    padding: .7rem .9rem;
+    font-size: 1.3rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: .4rem;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.add-note:hover{
+    background-color: var(--secondary-color);
+}
+
+.note-area{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 40px 20px 20px 20px;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.head-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .5rem;
+}
+
+.head-area span{
+    color: #fff;
+    background-color: var(--secondary-color);
+    padding: .2rem .4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.head-area span:hover{
+    background-color: var(--accent2);
+}
+
+.note-item{
+    border-radius: .6rem;
+    height: 250px;
+    background-color: #fff;
+    box-shadow: 0 0 7px var(--primary-color);
+    padding: .6rem 1rem;
+    overflow: hidden;
+    width: 90%;
+    
+}
+
+.note-item h3{
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    text-align: center;
+    margin: .7rem 0;
+}
+
+.note-item h3.default-title{
+    color: var(--accent2);
+    font-style: italic;
+}
+
+.note-item p{
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    overflow-y: auto;
+    line-height: 1.5rem;
+    word-wrap: break-word;
+    max-height: 120px;
+}
+
+.note-item p::-webkit-scrollbar{
+    width: 0px;
+}
+
+.note-item p:hover::-webkit-scrollbar{
+    width: 4px;
+}
+
+.note-item p::-webkit-scrollbar-thumb{
+    background: var(--accent2);
+    border-radius: 10px;
+}
+
+@media(max-width: 760px){
+
+    body{
+        background-color: var(--accent1);
+    }
+
+    .notes{
+        margin: 0;
+    }
+
+
+
+    .note-area{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .note-item{
+        max-width: 70%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .notes-input input{
+        font-size: 1.3rem;
+    }
+
+    .notes-input textarea{
+        font-size: 1.4rem;
+    }
+
+}
+
+
+@media(max-width: 560px){
+
+    .note-item{
+        max-width: 80%;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+
